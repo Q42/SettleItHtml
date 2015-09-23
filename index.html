@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>SettleIt! iOS App</title>
+      <link href="http://settleitapp.com/settleit_favicon.ico" rel="shortcut icon" type="image/x-icon">
+      <link href="http://w00tcamp.nl/badge.css" rel="stylesheet" type="text/css"><style type="text/css">
+body {
+  font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+  background: #42413C;
+  margin: 0;
+  padding: 0;
+  color: #000;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+  padding: 0;
+  margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;   /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+  padding-right: 15px;
+  padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+  img {
+    border: none;
+  }
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+  border: none;
+}
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+  color: #42413C;
+  text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+  color: #6E6C64;
+  text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+  text-decoration: none;
+}
+
+/* ~~ this fixed width container surrounds all other elements ~~ */
+.container {
+  width: 960px;
+  background: #FFF;
+    /*margin: 0 auto; the auto value on the sides, coupled with the width, centers the layout */
+    left: 50%;
+    margin-left: -480px;
+    position: absolute;
+}
+
+/* ~~ This is the layout information. ~~
+
+1) Padding is only placed on the top and/or bottom of the div. The elements within this div have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+*/
+.content {
+  padding: 0px 0;
+}
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+  float: right;
+  margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+  float: left;
+  margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the overflow:hidden on the .container is removed */
+  clear:both;
+  height:0;
+  font-size: 1px;
+  line-height: 0px;
+}
+  .w00tcamp {
+   width: 500px;
+    position: absolute;
+    display: block;
+    top: 1730px;
+    left: 50%;
+    margin-left: -250px;
+  }
+
+  .socialmedia {
+   position: absolute;
+    display: block;
+    width: 250px;
+    left: 50%;
+    margin-left: -255px;
+    margin-top: 10px;
+  }
+
+  .twitter {
+    width: 100px;
+    float: left;
+  }
+
+  .facebook {
+    float: left;
+  }
+
+</style></head>
+   <body>
+
+      <div id="fb-root"></div>
+      <script>
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/nl_NL/all.js#xfbml=1&appId=156043017831371";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+      </script>
+
+
+      <div class="container">
+
+         <div class="socialmedia">
+
+            <div class="twitter">
+               <a class="twitter-share-button" data-related="SettleItapp" data-text="Have something to settle? #SettleIt! with this awesome iPhone app!" data-url="http://settleitapp.com" data-via="SettleItapp" href="https://twitter.com/share" shape="rect">Tweet</a>
+               <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+               </div>
+
+            <div class="facebook">
+
+               <div class="fb-like" data-href="http://settleitapp.com" data-layout="button_count" data-send="false" data-show-faces="false" data-width="50"></div>
+
+            </div>
+
+
+         </div>
+
+         <div class="content">
+            <img align="top" height="1850" src="fullpage.jpg" usemap="#links" width="960">
+            <a class="w00tcamp" href="http://w00tcamp.nl" shape="rect"><img alt="w00tcamp 2011" src="http://w00tcamp.nl/w00tcamp-logo.png">
+               A w00tcamp project by Q42 &amp; Fabrique
+               </a><map name="links">
+               <area alt="Get the app in the App Store" coords="237,351,462,491" href="http://itunes.apple.com/nl/app/settleit!/id479881414?mt=8" shape="rect">
+               <area alt="Visit our Twitter page" coords="323,1374,637,1427" href="http://twitter.com/settleitapp" shape="rect">
+               <area alt="Visit our Twitter page" coords="23,5,200,33" href="http://twitter.com/settleitapp" shape="rect">
+               <area alt="Fabrique" coords="781,8,906,34" href="http://www.fabrique.nl" shape="rect">
+               <area alt="Q42" coords="911,0,943,38" href="http://www.q42.nl" shape="rect">
+               <area alt="Visit the website of Q42" coords="311,1498,394,1601" href="http://www.q42.nl" shape="rect">
+               <area alt="Visit the website of Fabrique" coords="437,1515,719,1575" href="http://www.fabrique.nl" shape="rect">
+               <area alt="Visit the website of W00tcamp" coords="754,1491,933,1592" href="http://www.w00tcamp.nl" shape="rect">
+               <area alt="Visit Benjamin's Twitter page" coords="400,1618,561,1641" href="http://twitter.com/M0rph3v5" shape="rect">
+               <area alt="Visit Patrick's Twitter page" coords="681,1618,839,1641" href="http://twitter.com/psanwikarja" shape="rect">
+               <area alt="Visit the website of W00tcamp" coords="234,1640,375,1663" href="http://www.w00tcamp.nl" shape="rect"></map>
+
+
+         </div>
+
+      </div>
+
+      <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-27928443-1']);
+        _gaq.push(['_setDomainName', 'settleitapp.com']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+      </script>
+      </body>
+</html>
